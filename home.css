@@ -1,0 +1,184 @@
+
+*{
+    box-sizing: border-box;
+    margin:0 ; 
+    padding: 0;
+    
+}
+
+
+body{
+    
+    height: 100vh;
+    background-image: url('https://www.saharadeserttravel.com/wp-content/uploads/2020/04/sahara.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* [START] Header */
+
+nav{
+    height: 80px;
+    background-color: black;
+    opacity: 0.85;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: sticky;
+    z-index: 1;
+}
+
+#nomePrinc{
+    color: aliceblue;
+    display: inline;
+    margin-right: auto;
+    font-size: 40px;
+    margin-top:11px;
+    font-family: 'Cinzel', serif;
+
+}
+
+ul{
+    list-style:none;
+    display: flex;
+    gap: 30px;
+    font-size: 17px;
+    margin-top:9px;
+    font-size:19px;    
+}
+
+li{
+    position:relative;
+}
+
+li::after{
+    content: '';
+    height: 1.2px;
+    width:0;
+    transition: 0.2s;
+    background-color: rgb(255, 187, 0);
+    position: absolute;
+    left:0;
+    bottom:-8px;
+}
+
+li:hover::after{
+    width:100%;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#botOffCan{
+
+    background-color: transparent;
+    border:none;
+    margin-bottom: 8px;
+    display: none;
+
+}
+
+
+
+.offCanvOption{
+    color: rgb(0, 0, 0);
+    font-size: 17px;   
+}
+
+hr{
+    color: orange;
+}
+
+/* [END] Header */
+
+
+/* [START] content */
+
+
+main{
+    background-color: transparent;
+    height: 220px;
+    width: 800px;
+    margin:0 auto;
+    margin-top:354px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    backdrop-filter:blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:22px;
+    position: sticky;
+    z-index: 0;
+}
+
+#pButtonUno{
+    font-size: 29px;
+    color: white;    
+}
+
+main button{
+    border: none;
+    background-color: black;
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+}
+
+main button:hover{
+    background-color: orange;
+}
+
+#pButtonDue{
+    color: white;
+    margin-top: 6px;
+    font-size: 17px;
+}
+
+/* [END] content */
+
+
+@media screen and (max-width:730px) {
+
+
+/* [START] Header */
+
+#nomePrinc{
+    font-size: 30px;
+}
+
+
+ul{
+    display: none;
+    
+}
+
+#botOffCan{
+    display: block;
+    
+}
+
+/* [END] Header */
+
+
+/* [START] content */
+
+main{
+    height: 400px;
+    width:300px;
+    margin:0 auto;
+    margin-top:130px;
+}
+
+#pButtonUno{
+    text-align: center;
+}
+
+
+}

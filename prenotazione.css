@@ -1,0 +1,190 @@
+
+*{
+    box-sizing: border-box;
+    margin:0 ; 
+    padding: 0;
+    
+}
+
+
+body{
+    
+    height: 100vh;
+    background-image: url('https://www.civitatis.com/f/tunez/djerba/tour-quad-djerba-r32.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* [START] Header */
+
+nav{
+    height: 80px;
+    background-color: black;
+    opacity: 0.85;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: sticky;
+    z-index: 1;
+}
+
+#nomePrinc{
+    color: aliceblue;
+    display: inline;
+    margin-right: auto;
+    font-size: 40px;
+    margin-top:11px;
+    font-family: 'Cinzel', serif;
+
+}
+
+ul{
+    list-style:none;
+    display: flex;
+    gap: 30px;
+    font-size: 17px;
+    margin-top:9px;
+    font-size:19px;    
+}
+
+li{
+    position:relative;
+}
+
+li::after{
+    content: '';
+    height: 1.2px;
+    width:0;
+    transition: 0.2s;
+    background-color: rgb(255, 187, 0);
+    position: absolute;
+    left:0;
+    bottom:-8px;
+}
+
+li:hover::after{
+    width:100%;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#botOffCan{
+
+    background-color: transparent;
+    border:none;
+    margin-bottom: 8px;
+    display: none;
+
+}
+
+
+
+.offCanvOption{
+    color: rgb(0, 0, 0);
+    font-size: 17px;   
+}
+
+hr{
+    color: orange;
+}
+
+/* [END] Header */
+
+
+/* [START] Content */
+
+.pren{
+    width: 400px;
+    height:520px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 15px;
+    backdrop-filter:blur(10px);
+    margin:0 auto;
+    margin-top:180px;
+    padding:40px 50px;
+    position: sticky;
+    z-index: 0;
+}
+
+label{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+input{
+    border-radius: 5px;
+    border: 1px solid black;
+}
+#prenota{
+    margin-left: 207px;
+    width: 115px;
+    height:30px;
+    border-radius: 15px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+#prenota:hover{
+    background-color: orange;
+}
+
+#success{
+    
+    height: 45px;
+    width: 530px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: black;
+    backdrop-filter:blur(15px);
+    border-radius: 5px;
+}
+
+#success p{
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* [END] Content */
+
+@media screen and (max-width:730px) {
+
+
+
+    /* [START] Header */
+    
+    #nomePrinc{
+        font-size: 30px;
+    }
+    
+    
+    ul{
+        display: none;
+        
+    }
+    
+    #botOffCan{
+        display: block;
+        
+    }
+    
+    /* [END] Header */
+
+    /* [START] Content */
+
+    .pren{
+        width: 100%;
+    }
+
+    
+    /* [END] Content */
+}
